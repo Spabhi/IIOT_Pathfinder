@@ -1,0 +1,147 @@
+================================================================================
+INDUSTRIAL IOT (IIOT) USE CASES: AUTOMOTIVE ASSEMBLY PLANT
+Architecture Mapping: Purdue Enterprise Reference Architecture (PERA / Levels 0-5)
+Target Plant Baseline: 250,000 Vehicles / Year
+================================================================================
+
+--------------------------------------------------------------------------------
+USE CASE 1: HIGH-FREQUENCY FASTENING ANALYTICS & ZERO-DEFECT TORQUE PROFILING
+--------------------------------------------------------------------------------
+1. Plant Shop / Target Area:
+   - Final Assembly (General Assembly / Chassis Marriage & Safety Bolting)
+
+2. Purdue Model Layer Mapping:
+   - Level 0: Strain gauges, resolvers, angle encoders, motor windings inside 
+     transducerized DC nutrunners.
+   - Level 1: Multi-axis tool controllers (e.g., Atlas Copco Power Focus, 
+     Desoutter CVI3) executing local safety shut-offs.
+   - Level 2: Industrial Edge Gateway (Siemens IPC / Advantech) capturing data 
+     via Open Protocol / OPC UA.
+   - Level 3: Plant MES / Quality Management System (QMS) receiving pass/fail, 
+     peak torque, final angle, and digital buy-off status.
+   - Level 3.5 (IDMZ): Secure data diode / broker passing telemetry across OT/IT.
+   - Level 5: Corporate AWS / Azure IoT Data Lake running fleet tool fatigue models.
+
+3. The Problem:
+   - Safety-critical joints (suspension-to-chassis, brake calipers, battery pack 
+     enclosures) often pass scalar checks (e.g., final torque within 85 Nm +/- 2 Nm), 
+     yet conceal latent structural defects such as cross-threading, stripped threads, 
+     dry/unlubricated threads, or improper bolt seating.
+   - Current verification relies on manual downstream torque-wrench audits or 
+     post-shipment customer warranty notices.
+
+4. IIoT Solution & Data Flows:
+   - Edge Ingestion: Edge computing nodes collect 1 kHz torque-over-angle and 
+     torque-over-time curves over Open Protocol (TCP/IP) or OPC UA.
+   - Real-Time Inference: Local machine-learning model classifies anomalies 
+     (e.g., gradient deviations indicating cross-threading) in under 200 ms.
+   - Station Interlock: Edge device signals Level 1 Station PLC over PROFINET to 
+     halt skid transport if an anomaly is detected, forcing station rework.
+   - Upstream Serialization: Traceability payload (VIN, socket ID, torque curve, 
+     timestamp) is published to Level 5 Cloud via MQTT Sparkplug B for long-term 
+     predictive tool maintenance.
+
+5. Estimated Business Value (Per 250,000-Unit/Year Plant):
+   - Rework & Teardown Reduction: Prevents downstream teardown at End-of-Line (EOL), 
+     saving EUR 350,000 - EUR 600,000 annually in direct technician labor.
+   - Recall & Warranty Avoidance: Eliminates critical loose-fastener recalls; 
+     preventing even one minor field campaign saves EUR 1,500,000 - EUR 5,000,000+.
+   - Tool Life Optimization: Moving from fixed-cycle maintenance to dynamic fatigue 
+     analytics extends tool life by 15% - 20% (approx. EUR 80,000/year savings).
+   - Payback Period: 6 - 9 months.
+
+
+--------------------------------------------------------------------------------
+USE CASE 2: CLOSED-LOOP ACOUSTIC & THERMAL WELD QUALITY INSPECTION
+--------------------------------------------------------------------------------
+1. Plant Shop / Target Area:
+   - Body-in-White (BIW / Robotic Spot & Laser Welding Lines)
+
+2. Purdue Model Layer Mapping:
+   - Level 0: Contact acoustic emission (AE) piezoelectric sensors, Rogowski 
+     coils, secondary current transformers, laser seam sensors.
+   - Level 1: Weld timers (e.g., Bosch Rexroth PSI series, WTC) and 6-axis robot 
+     controllers (Fanuc, KUKA).
+   - Level 2: High-speed edge DAQ IPC connected via PROFINET RT / IRT.
+   - Level 3: BIW Line Quality Database & Plant MES tracking weld integrity per VIN.
+   - Level 5: Central ML repository analyzing weld nugget morphology across plants.
+
+3. The Problem:
+   - A standard automotive BIW contains 4,000 to 5,000 resistance spot welds.
+   - Traditional QA requires destructive teardown ("chisel tests") of finished bodies 
+     and ultrasonic manual audits. These are labor-intensive, slow, and catch 
+     defects only after dozens of substandard bodies have left the cell.
+
+4. IIoT Solution & Data Flows:
+   - High-Frequency Capture: Level 0 piezoelectric AE sensors and secondary shunts 
+     stream high-frequency acoustic bursts and dynamic resistance data at 50 kHz.
+   - Adaptive Closed-Loop Control: Edge analytics identify expulsion (spatter) or 
+     undersized nugget formation within the first 30-40 ms of the weld cycle.
+   - Immediate Correction: The edge device sends an immediate current/time trim 
+     command via PROFINET IRT back to the Level 1 weld timer, adjusting the power 
+     profile before the cycle finishes.
+   - Complete Genealogy: Every individual weld signature is tagged with Robot ID, 
+     Sheet Stack Recipe, Gun Tip ID, and VIN, then pushed via OPC UA to Level 3 MES.
+
+5. Estimated Business Value (Per 250,000-Unit/Year Plant):
+   - Destruction & Scrap Reduction: Eliminates the requirement to chisel-test 
+     2 to 3 completed bodies/month, saving EUR 180,000 - EUR 300,000 in scrap steel.
+   - Quality Labor Savings: Reduces manual ultrasonic inspection by 50%, saving 
+     EUR 200,000 - EUR 350,000 annually.
+   - Downstream Defect Elimination: Eliminates structural rework in paint and final 
+     assembly, contributing approx. EUR 250,000/year.
+   - Payback Period: 8 - 12 months.
+
+
+--------------------------------------------------------------------------------
+USE CASE 3: DYNAMIC RTO AIRFLOW & OVEN THERMAL PROFILE OPTIMIZATION
+--------------------------------------------------------------------------------
+1. Plant Shop / Target Area:
+   - Paint Shop (E-Coat & Topcoat Curing Ovens / Regenerative Thermal Oxidizers)
+
+2. Purdue Model Layer Mapping:
+   - Level 0: Multi-zone thermocouples (Pt100), optical pyrometers, differential 
+     pressure transmitters, VOC FID sensors.
+   - Level 1: Burner management PLCs, HVAC air-handling PLCs, VFD damper controllers.
+   - Level 2: Paint Shop SCADA / Oven Line Overview (Siemens WinCC / Ignition).
+   - Level 3: Plant Historian (OSIsoft PI / AVEVA) recording time-series heat zones.
+   - Level 5: Cloud Thermodynamics AI / Plant Digital Twin.
+
+3. The Problem:
+   - Paint curing ovens and abatement systems (RTOs) consume 40% to 50% of the entire 
+     facility's natural gas and thermal energy.
+   - Because production spacing and vehicle thermal mass fluctuate (e.g., bare car 
+     vs. heavy SUV, or conveyor gap spacing), ovens run at static worst-case 
+     temperatures, wasting massive amounts of fuel and venting excess heat.
+
+4. IIoT Solution & Data Flows:
+   - Real-Time Contextual Telemetry: Vehicle skid tracking (model type, thermal mass, 
+     color absorption rate) is merged with real-time zone temperatures, ambient air 
+     humidity, and VOC emissions via OPC UA / Modbus TCP.
+   - AI Thermal Model: A thermodynamic model computes the minimum required energy 
+     profile for the dynamic body mix inside the 150-meter baking tunnel.
+   - Closed-Loop Setpoint Trimming: The model continuously adjusts burner firing rates, 
+     recirculation fan speeds, and exhaust dampers via Level 1 PLCs, automatically 
+     throttling down during gaps in production without under-curing.
+
+5. Estimated Business Value (Per 250,000-Unit/Year Plant):
+   - Natural Gas Savings: 12% - 18% reduction in gas consumption delivers 
+     EUR 700,000 - EUR 1,200,000 annually (dependent on regional industrial tariffs).
+   - Emissions / Carbon Credits: Avoids 3,000 to 6,000 metric tons of CO2 per year, 
+     saving EUR 200,000 - EUR 450,000 under compliance programs (such as EU ETS).
+   - Rework Reduction: Eliminates paint over-baking defects and under-cure blisters, 
+     saving approx. EUR 150,000/year.
+   - Payback Period: 4 - 7 months.
+
+
+================================================================================
+CONSOLIDATED BUSINESS VALUE SUMMARY
+================================================================================
+| IIoT Use Case               | Shop Area      | Est. Annual Value     | Payback |
+|-----------------------------|----------------|-----------------------|---------|
+| 1. Zero-Defect Fastening    | Final Assembly | EUR 600k - EUR 1.2M+  | 6-9 mo  |
+| 2. Closed-Loop Weld Quality | Body-in-White  | EUR 630k - EUR 900k   | 8-12 mo |
+| 3. Oven Thermal Energy Opt. | Paint Shop     | EUR 1.05M - EUR 1.8M  | 4-7 mo  |
+================================================================================
+TOTAL ESTIMATED ANNUAL VALUE: EUR 2.28M - EUR 3.90M / Plant / Year
+================================================================================

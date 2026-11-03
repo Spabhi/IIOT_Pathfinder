@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HDRU44G07SzZqzUEzPqF">
+    <mxGraphModel dx="3293" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-1" parent="1" style="triangle;whiteSpace=wrap;html=1;shapeInside=1;rotation=-90;" value="" vertex="1">
+          <mxGeometry height="790" width="650" x="90" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-2" edge="1" parent="1" source="wRgB68Us7DnmxCcdsBgR-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.754;entryY=0.622;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.752;exitY=0.376;exitDx=0;exitDy=0;exitPerimeter=0;" target="wRgB68Us7DnmxCcdsBgR-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="410" as="sourcePoint" />
+            <mxPoint x="420" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-3" edge="1" parent="1" source="wRgB68Us7DnmxCcdsBgR-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="wRgB68Us7DnmxCcdsBgR-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="630" as="sourcePoint" />
+            <mxPoint x="450" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-4" edge="1" parent="1" source="wRgB68Us7DnmxCcdsBgR-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.354;exitY=0.182;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.354;entryY=0.827;entryDx=0;entryDy=0;entryPerimeter=0;" target="wRgB68Us7DnmxCcdsBgR-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="375" y="720" as="sourcePoint" />
+            <mxPoint x="425" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-5" edge="1" parent="1" source="wRgB68Us7DnmxCcdsBgR-17" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.2;exitY=0.095;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.2;entryY=0.899;entryDx=0;entryDy=0;entryPerimeter=0;" target="wRgB68Us7DnmxCcdsBgR-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="820" as="sourcePoint" />
+            <mxPoint x="410" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Sensors, Actuators &amp;amp; every deviec recognizing, assembling the parts being processed" vertex="1">
+          <mxGeometry height="30" width="60" x="385" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Remote Terminal units(RTUs), PLCs, Assembly Robots and similar machines" vertex="1">
+          <mxGeometry height="50" width="200" x="310" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Visual inspection, quality checks, electrical and electronics&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&amp;nbsp;diagnostics, SCADA Operator Stations and similar machines used by line supervisors&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="305" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Operation plans and schedules. when does the machine run, how many shifts etc., MES" vertex="1">
+          <mxGeometry height="30" width="290" x="270" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ERP and SAP planning, budget allocations etc., Supply Chain Management, Logistics Planning and Cloud Analytics" vertex="1">
+          <mxGeometry height="30" width="290" x="285" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Physical process- Shopfloor" vertex="1">
+          <mxGeometry height="30" width="100" x="120" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Basic Control" vertex="1">
+          <mxGeometry height="30" width="60" x="140" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Supervisoty Control" vertex="1">
+          <mxGeometry height="30" width="60" x="40" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Site Operations" vertex="1">
+          <mxGeometry height="30" width="60" x="-120" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-18" edge="1" parent="1" source="wRgB68Us7DnmxCcdsBgR-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.2;exitY=0.095;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.2;entryY=0.899;entryDx=0;entryDy=0;entryPerimeter=0;" target="wRgB68Us7DnmxCcdsBgR-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="95" y="770" as="sourcePoint" />
+            <mxPoint x="730" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Industrial DMZ that deals with Jump hosts, patch management servers etc." vertex="1">
+          <mxGeometry height="30" width="260" x="290" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="wRgB68Us7DnmxCcdsBgR-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Site Business and enterprise IT&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="100" x="-120" y="810" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

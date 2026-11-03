@@ -1,0 +1,212 @@
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="purdue_automotive" name="Purdue Model Automotive">
+    <mxGraphModel dx="1422" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;Purdue Enterprise Reference Architecture (PERA) — Automotive Assembly Plant&lt;/b&gt;&lt;br&gt;&lt;i&gt;Stamping, Body-in-White (BIW), Paint Shop, and Final Assembly (General Assembly)&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#1E293B;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- LEVEL 5: Enterprise Network & Cloud -->
+        <mxCell id="lvl5_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="90" width="1150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl5_header" value="&lt;b&gt;LEVEL 5: ENTERPRISE NETWORK &amp;amp; CLOUD&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Multi-Plant Analytics, Global Supply Chain, Fleet Telematics &amp;amp; Digital Twin&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#E2E8F0;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="100" y="90" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl5_c1" value="&lt;b&gt;Enterprise Data Lake &amp;amp; AI/ML&lt;/b&gt;&lt;br&gt;• Snowflake / Databricks / AWS IoT&lt;br&gt;• Fleet-wide tool vibration &amp;amp; wear models&lt;br&gt;• Central battery/powertrain analytics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="140" width="330" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl5_c2" value="&lt;b&gt;Connected Vehicle &amp;amp; Digital Twin&lt;/b&gt;&lt;br&gt;• As-Built digital twin sync&lt;br&gt;• Fleet telematics onboarding&lt;br&gt;• Cloud OTA software provisioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="510" y="140" width="330" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl5_c3" value="&lt;b&gt;Corporate Strategy &amp;amp; Sourcing&lt;/b&gt;&lt;br&gt;• Multi-plant production allocation&lt;br&gt;• Global supplier visibility &amp;amp; logistics&lt;br&gt;• Fleet warranty / field recall analytics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="140" width="330" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- L5 to L4 Connector -->
+        <mxCell id="flow_5_4" value="&lt;b&gt;HTTPS, TLS, AMQP, Apache Kafka, gRPC, REST APIs&lt;/b&gt;&lt;br&gt;▲ Up: Plant KPI rollups, warranty feeds, telemetry | ▼ Down: Corporate schedules, ECOs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="lvl5_box" target="lvl4_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="240" />
+              <mxPoint x="675" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 4: Business Logistics & Plant IT -->
+        <mxCell id="lvl4_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="280" width="1150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl4_header" value="&lt;b&gt;LEVEL 4: PLANT ENTERPRISE NETWORK (BUSINESS LOGISTICS &amp;amp; IT)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;Enterprise Resource Planning, Product Lifecycle Management &amp;amp; Plant Supply Chain&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#E2E8F0;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#0F172A;" vertex="1" parent="1">
+          <mxGeometry x="100" y="280" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl4_c1" value="&lt;b&gt;Plant ERP (SAP S/4HANA / Oracle)&lt;/b&gt;&lt;br&gt;• Master Production Schedule (MPS)&lt;br&gt;• Parts inventory &amp;amp; materials consumption&lt;br&gt;• Customer order matrix &amp;amp; invoicing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="330" width="330" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl4_c2" value="&lt;b&gt;PLM &amp;amp; CAD (Siemens Teamcenter / Windchill)&lt;/b&gt;&lt;br&gt;• As-Designed Bill of Materials (BOM)&lt;br&gt;• Engineering Change Orders (ECO)&lt;br&gt;• Vehicle option code configurations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="510" y="330" width="330" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl4_c3" value="&lt;b&gt;Supply Chain, WMS &amp;amp; EDI&lt;/b&gt;&lt;br&gt;• Tier-1 supplier EDI (EDIFACT / ANSI X12)&lt;br&gt;• Just-In-Time (JIT) dock delivery&lt;br&gt;• Warehouse Management System (WMS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="330" width="330" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- L4 to IDMZ Connector -->
+        <mxCell id="flow_4_idmz" value="&lt;b&gt;SQL, HTTPS REST, SFTP, AMQP (Strict Firewall Rules, No Direct OT-to-IT)&lt;/b&gt;&lt;br&gt;▲ Up: Scrap, finished builds, consumed parts | ▼ Down: Daily orders, broadcast build list" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="lvl4_box" target="idmz_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="430" />
+              <mxPoint x="675" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 3.5: Industrial DMZ (IDMZ) -->
+        <mxCell id="idmz_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;dashed=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="470" width="1150" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="idmz_header" value="&lt;b&gt;LEVEL 3.5: INDUSTRIAL SECURITY DMZ (IDMZ)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#dc2626&quot;&gt;Perimeter Firewalls, Isolated Data Brokers &amp;amp; Secure Bastion Access (IEC 62443 Security Zone)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#FEE2E2;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=13;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="100" y="470" width="1150" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="idmz_c1" value="&lt;b&gt;Perimeter Security &amp;amp; Access&lt;/b&gt;&lt;br&gt;• Dual NGFW (Palo Alto / Fortinet)&lt;br&gt;• RDP / SSH Jump Boxes &amp;amp; MFA&lt;br&gt;• Centralized Patch Server (WSUS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F87171;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="510" width="330" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="idmz_c2" value="&lt;b&gt;Data Buffering &amp;amp; Mirroring&lt;/b&gt;&lt;br&gt;• Historian DMZ Proxy / Replica&lt;br&gt;• Secure File Transfer (SFTP Server)&lt;br&gt;• Application Reverse Proxies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F87171;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="510" y="510" width="330" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="idmz_c3" value="&lt;b&gt;Industrial Brokering&lt;/b&gt;&lt;br&gt;• Secure MQTT Broker / Demilitarized Node&lt;br&gt;• Encrypted OPC UA Reverse Connect&lt;br&gt;• Antivirus &amp;amp; Backup Repositories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F87171;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="510" width="330" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- IDMZ to L3 Connector -->
+        <mxCell id="flow_idmz_3" value="&lt;b&gt;Encrypted OPC UA, MQTT Sparkplug B, FactoryTalk / WinCC Gateway, SQL (TLS)&lt;/b&gt;&lt;br&gt;▲ Up: Replicated production tags, batch archives | ▼ Down: Production orders, master recipe sets" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="idmz_box" target="lvl3_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="580" />
+              <mxPoint x="675" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 3: MOM / MES -->
+        <mxCell id="lvl3_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="620" width="1150" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl3_header" value="&lt;b&gt;LEVEL 3: MANUFACTURING OPERATIONS MANAGEMENT (MOM / MES)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0369a1&quot;&gt;Shop-Floor Execution, Vehicle Build-to-Order Sequencing, Line Balancing &amp;amp; Traceability&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#BAE6FD;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#0C4A6E;" vertex="1" parent="1">
+          <mxGeometry x="100" y="620" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl3_c1" value="&lt;b&gt;Manufacturing Execution System (MES)&lt;/b&gt;&lt;br&gt;• Siemens Opcenter / Rockwell Plex / DELMIA&lt;br&gt;• VIN &amp;amp; Carrier sequence broadcast&lt;br&gt;• Just-in-Sequence (JIS) calls to sub-assembly lines&lt;br&gt;• Station interlocking based on quality gates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7DD3FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="670" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl3_c2" value="&lt;b&gt;Quality (QMS) &amp;amp; Traceability&lt;/b&gt;&lt;br&gt;• VIN-to-part binding (airbag, engine serial)&lt;br&gt;• Safety bolt torque/angle log recording&lt;br&gt;• BIW gap-and-flush laser audit database&lt;br&gt;• End-of-Line (EOL) flash validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7DD3FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="415" y="670" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl3_c3" value="&lt;b&gt;Plant Historian &amp;amp; Analytics&lt;/b&gt;&lt;br&gt;• OSIsoft PI / AVEVA Historian&lt;br&gt;• Paint oven temperature profile storage&lt;br&gt;• Stamping press tonnage archive&lt;br&gt;• Spot weld impedance &amp;amp; expulsion logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7DD3FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="670" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl3_c4" value="&lt;b&gt;OEE &amp;amp; Maintenance (CMMS)&lt;/b&gt;&lt;br&gt;• Andon display board server&lt;br&gt;• MTTR / MTBF breakdown tracking&lt;br&gt;• Real-time bottleneck detection&lt;br&gt;• Automated work order triggers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7DD3FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="985" y="670" width="245" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- L3 to L2 Connector -->
+        <mxCell id="flow_3_2" value="&lt;b&gt;OPC UA, Modbus TCP, EtherNet/IP (CIP), PROFINET, TCP/IP Sockets&lt;/b&gt;&lt;br&gt;▲ Up: Carrier arrival, torque curves, DTCs, cycle times | ▼ Down: Build sequence ID, part recipes, line run commands" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="lvl3_box" target="lvl2_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="795" />
+              <mxPoint x="675" y="835" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 2: Supervisory Control -->
+        <mxCell id="lvl2_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="835" width="1150" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl2_header" value="&lt;b&gt;LEVEL 2: SUPERVISORY CONTROL (SCADA &amp;amp; HMIs)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#047857&quot;&gt;Shop Line SCADA, Station HMIs, Skid/Carrier Tracking &amp;amp; Safety Zone Supervisors&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#A7F3D0;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#064E3B;" vertex="1" parent="1">
+          <mxGeometry x="100" y="835" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl2_c1" value="&lt;b&gt;Stamping SCADA / HMI&lt;/b&gt;&lt;br&gt;• Press line sync supervisory&lt;br&gt;• Automated die-change recipes&lt;br&gt;• Tonnage monitor alarm supervisory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6EE7B7;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="885" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl2_c2" value="&lt;b&gt;Body-in-White (BIW) SCADA&lt;/b&gt;&lt;br&gt;• Robotic welding cell line overview&lt;br&gt;• Geometric framing station supervisor&lt;br&gt;• Laser inline inspection HMI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6EE7B7;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="415" y="885" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl2_c3" value="&lt;b&gt;Paint Shop SCADA&lt;/b&gt;&lt;br&gt;• E-Coat immersion bath control&lt;br&gt;• Oven curing thermal zones&lt;br&gt;• Paint color change purge management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6EE7B7;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="885" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl2_c4" value="&lt;b&gt;Final Assembly (GA) SCADA&lt;/b&gt;&lt;br&gt;• Skillet / EMS conveyor tracking&lt;br&gt;• Chassis &amp;quot;marriage&amp;quot; cell supervisory&lt;br&gt;• Fastening station bypass interlocks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6EE7B7;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="985" y="885" width="245" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- L2 to L1 Connector -->
+        <mxCell id="flow_2_1" value="&lt;b&gt;PROFINET RT / IRT, EtherNet/IP (CIP), EtherCAT, Modbus TCP&lt;/b&gt;&lt;br&gt;▲ Up: Machine status, cycle complete, torque pass/fail | ▼ Down: Target program ID, cell start/stop, setpoints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D97706;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="lvl2_box" target="lvl1_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="1000" />
+              <mxPoint x="675" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 1: Basic Control -->
+        <mxCell id="lvl1_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1040" width="1150" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl1_header" value="&lt;b&gt;LEVEL 1: BASIC CONTROL (DETERMINISTIC AUTOMATION)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#b45309&quot;&gt;Programmable Logic Controllers (PLCs), Industrial Robots, Dedicated Controllers &amp;amp; AGVs&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#FDE68A;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#78350F;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1040" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl1_c1" value="&lt;b&gt;Stamping Controllers&lt;/b&gt;&lt;br&gt;• Press PLCs (Siemens S7-1500F)&lt;br&gt;• De-stacker sheet feeder servos&lt;br&gt;• Die protection &amp;amp; tonnage PACs&lt;br&gt;• Scrap conveyor VFD drives" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FCD34D;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1090" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl1_c2" value="&lt;b&gt;BIW Robotic Controllers&lt;/b&gt;&lt;br&gt;• Spot welding robot PACs (KUKA/Fanuc)&lt;br&gt;• Bosch Rexroth weld timers (MFDC)&lt;br&gt;• Structural adhesive dispensing controllers&lt;br&gt;• Laser welding optical trackers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FCD34D;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="415" y="1090" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl1_c3" value="&lt;b&gt;Paint Shop Controllers&lt;/b&gt;&lt;br&gt;• Paint robot trajectory PACs (ABB)&lt;br&gt;• Bell atomizer electrostatic speed drives&lt;br&gt;• Air handling &amp;amp; humidity HVAC PLCs&lt;br&gt;• Cataphoretic dip hoist sync drives" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FCD34D;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1090" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl1_c4" value="&lt;b&gt;Final Assembly Controllers&lt;/b&gt;&lt;br&gt;• DC Tool controllers (Atlas Copco / Desoutter)&lt;br&gt;• AGV / AMR fleet guidance PLCs&lt;br&gt;• Fluid fill rigs (brake, coolant, AC)&lt;br&gt;• Cognex / Keyence barcode &amp;amp; VIN cameras" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FCD34D;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="985" y="1090" width="245" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- L1 to L0 Connector -->
+        <mxCell id="flow_1_0" value="&lt;b&gt;PROFIsafe, CIP Safety, IO-Link, AS-Interface, CANopen, 4-20mA, 24V DC Discrete&lt;/b&gt;&lt;br&gt;▲ Up: Proximity triggers, raw torque/angle, weld feedback, optical barriers | ▼ Down: Solenoid open/close, motor power, weld trigger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=2;labelBackgroundColor=#FFFFFF;fontSize=10;" edge="1" parent="1" source="lvl1_box" target="lvl0_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="1215" />
+              <mxPoint x="675" y="1255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LEVEL 0: Physical Process & Instrumentation -->
+        <mxCell id="lvl0_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#4F46E5;strokeWidth=2;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1255" width="1150" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl0_header" value="&lt;b&gt;LEVEL 0: PHYSICAL PROCESS &amp;amp; SENSORS / ACTUATORS&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#4338ca&quot;&gt;Press Dies, Spot Weld Guns, Atomizers, Nutrunners, Photocell Sensors &amp;amp; Physical Machinery&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=#C7D2FE;align=left;verticalAlign=middle;spacingLeft=15;rounded=1;fontSize=14;fontColor=#312E81;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1255" width="1150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl0_c1" value="&lt;b&gt;Stamping Machinery&lt;/b&gt;&lt;br&gt;• Sheet metal coils &amp;amp; blanks&lt;br&gt;• Hydraulic cylinders &amp;amp; bolster plates&lt;br&gt;• Die tonnage strain sensors&lt;br&gt;• Double-blank detection inductive sensors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A5B4FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1305" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl0_c2" value="&lt;b&gt;BIW Welding Hardware&lt;/b&gt;&lt;br&gt;• Servo-driven spot weld guns &amp;amp; tips&lt;br&gt;• Pneumatic clamping cylinders&lt;br&gt;• Weld current transformers &amp;amp; shunts&lt;br&gt;• Laser seam tracking sensors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A5B4FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="415" y="1305" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl0_c3" value="&lt;b&gt;Paint Application Hardware&lt;/b&gt;&lt;br&gt;• Rotary electrostatic bells (60,000 RPM)&lt;br&gt;• Gear metering pumps &amp;amp; color valves&lt;br&gt;• RTD temperature sensors (Pt100)&lt;br&gt;• Explosion-proof booth pressure sensors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A5B4FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1305" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lvl0_c4" value="&lt;b&gt;Final Assembly Hardware&lt;/b&gt;&lt;br&gt;• DC transducerized nutrunner motors&lt;br&gt;• Torque strain gauges &amp;amp; angle encoders&lt;br&gt;• RFID antennas on conveyor skids&lt;br&gt;• Light curtains &amp;amp; safety mats" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A5B4FC;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="985" y="1305" width="245" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Legend / Security Zone annotations -->
+        <mxCell id="legend_box" value="&lt;b&gt;IEC 62443 / PERA Security &amp;amp; Network Boundary Legend:&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#475569&quot;&gt;• &lt;b&gt;Enterprise Zone (L4-L5):&lt;/b&gt; IT routed network, cloud services, transactional latency tolerable (&amp;gt;1s).&lt;br&gt;• &lt;b&gt;IDMZ (L3.5):&lt;/b&gt; Complete physical/logical airbreak. Terminating proxies, no dual-homed routing across OT/IT.&lt;br&gt;• &lt;b&gt;Manufacturing Zone (L3):&lt;/b&gt; Plant-level supervisory, seconds-level latency, batch tracking.&lt;br&gt;• &lt;b&gt;Cell/Area Control Zone (L0-L2):&lt;/b&gt; Deterministic fieldbuses, sub-millisecond safety and cyclic IO control.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;align=left;spacingLeft=15;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1460" width="1150" height="80" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
